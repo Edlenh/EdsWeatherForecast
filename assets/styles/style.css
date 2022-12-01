@@ -1,0 +1,26 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Sono', sans-serif;
+}
+
+body{
+    background-color:#3eabefa2;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#card{
+    background-color: #fff;
+    font-size: 50px;
+    box-shadow:0 1px 10px -2px;
+    border-color: #3eabefa2;
+    padding: 23px 135px 21px;
+}
+
