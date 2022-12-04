@@ -24,11 +24,29 @@ body{
     font-size: 20px;
     box-shadow:0 1px 10px -2px;
     border-color: #3eabefa2;
-    position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    margin-top: -50px;
-    margin-left: -100px;
+    margin-top: 2px;
+  
 
 }
 
+.search{
+    font-size: 40px;
+    border: 1px solid #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city_search{
+    font-size: 20px;
+}
+
+.submit_search{
+    font-size: 20px;
+}
+
+.five_day{
+    display: inline;
+}
