@@ -3,25 +3,33 @@ var apiKey = '83ba888341c4c3c5f2ce6316ad28fbfd'
 var searchForm = document.querySelector(".search")
 var fiveDay = document.getElementById("five_day")
 let locationIcon = document.querySelector('.weather-icon');
+let recentEl= document.querySelector(".recent_searches")
+var recentSearch= []
 
 
 //create function for search 
 searchForm.addEventListener("submit", function(event){
   event.preventDefault()
+  //clear page of last city search results
+ fiveDay.innerHTML=""
   var cityName =  city.value
+  var citySer = JSON.stringify(cityName)
   fetchWeather(cityName)
+  localStorage.setItem("City Name ", citySer);
+
+
+  recentSearch.push(cityName);
+  localStorage.setItem("CityName", JSON.stringify(recentSearch));
+
+  recentEl.append(recentSearch)
+
   fetchForecast(cityName)
+  //clear search form
   city.value=""
-});
 
+}
 
-
-//save to local storage
-//diisplay local storage = Recent History 
-// if already searched dont add it again
-
-    // localStorage.setItem
-    // forecast.search();
+);
 
 
 function fetchForecast(city){
