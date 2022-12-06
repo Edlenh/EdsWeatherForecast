@@ -21,7 +21,7 @@ searchForm.addEventListener("submit", function(event){
   recentSearch.push(cityName);
   localStorage.setItem("CityName", JSON.stringify(recentSearch));
 
-  recentEl.append(recentSearch)
+  recentEl.append(recentSearch[recentSearch.length -1])
 
   fetchForecast(cityName)
   //clear search form
